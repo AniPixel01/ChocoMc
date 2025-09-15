@@ -1,0 +1,204 @@
+<!DOCTYPE ahtml>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChocoMC HomePage</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-[#030c0c] text-white flex flex-col items-center;
+        }
+        .container {
+            @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+        }
+        .gradient-bg {
+            background-image: linear-gradient(180deg, #10b981, #064e3b, #030c0c);
+            position: relative;
+        }
+        .card {
+            @apply bg-[#158E56] rounded-2xl shadow-lg p-6;
+        }
+        .future-plan-card {
+            @apply bg-[#158E56] rounded-2xl p-6;
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #00C8FF, #33FF7A, #00FFCC);
+        }
+        /* Custom styles for the pop-up message */
+        .toast {
+            @apply fixed bottom-5 left-1/2 -translate-x-1/2 py-3 px-6 rounded-full shadow-lg transition-opacity duration-300 z-50;
+            background-color: #A3E635;
+            color: black;
+        }
+    </style>
+</head>
+<body class="gradient-bg">
+
+    <!-- Header / Navigation -->
+    <header class="container pt-6 pb-20">
+        <nav class="flex items-center justify-between">
+            <!-- Logo/Site Name -->
+            <div class="text-2xl font-bold"><span class="">CHOCOMC</span></div>
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex items-center gap-6 text-sm text-white">
+                <li><a href="#" class="hover:text-white transition-colors duration-200">HOME</a></li>
+                <li><a href="#future-plan-section" class="hover:text-white transition-colors duration-200">BLOG</a></li>
+                <li><a href="store.html" class="hover:text-white transition-colors duration-200">STORE</a></li>
+		<li><a href="staff.html" class="hover:text-white transition-colors duration-200">STAFF</a></li>
+            </ul>
+            <!-- Join Discord Button -->
+            <a href="https://discord.gg/pUvS9JpE3e" target="_blank" rel="noopener noreferrer" class="hidden md:block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-200">
+                JOIN DISCORD
+            </a>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="text-center py-20 lg:py-40">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4">
+                WELCOME TO <span class="text-emerald-400">CHOCOMC</span>
+                <br>
+                THE REAL MINECRAFT EXPERIENCE
+            </h1>
+            <p class="text-white text-sm sm:text-base md:text-lg mb-8 max-w-2xl mx-auto">
+                Discover the best Minecraft server for a real lifesteal and boxpvp experience. Join us and make new friends.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button id="copy-ip-btn" class="bg-transparent border border-white text-white font-semibold py-3 px-8 rounded-full transition-colors duration-300 hover:bg-white hover:text-black">
+                    I'M A NEW PLAYER
+                </button>
+                <a href="https://discord.gg/pUvS9JpE3e" target="_blank" rel="noopener noreferrer" class="bg-transparent border border-white text-white font-semibold py-3 px-8 rounded-full transition-colors duration-300 hover:bg-white hover:text-black">
+                    JOIN THE DISCORD
+                </a>
+            </div>
+        </section>
+
+        <!-- Our Future Plan Section -->
+        <section id="future-plan-section" class="my-16 p-8 rounded-2xl bg-[#158E56] shadow-lg">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-10">Our Future Update and Changes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="future-plan-card">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="choco.webp" alt="Icon" class="rounded-full w-28 h-28">
+                        <div>
+                            <p class="text-lg font-semibold">New Forest Mines</p>
+                            <p class="text-xs text-white">15 September 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-white">
+                        We’ve just added a brand new warp — /warp forest 🌲.
+			<br>
+			This area introduces fresh mines and includes new tiers 14, 15, and 16. ⚔️✨
+			<br>
+			Hop in now and explore the new challenges!
+                    </p>
+                </div>
+                <div class="future-plan-card">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="choco.webp" alt="Icon" class="rounded-full w-28 h-28">
+                        <div>
+                            <p class="text-lg font-semibold">Not Fixed</p>
+                            <p class="text-xs text-white">Not Fixed</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-white">
+                        Stay Tuned For New Update
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call to Action -->
+        <section class="my-16 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-white ">
+                Grab your gear, bring your squad, and jump into the madness
+            </h2>
+            <button id="join-now-btn" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-12 rounded-full transition-colors duration-200">
+                    Join Now
+                </button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container text-center py-6 text-white text-sm">
+        <p>Created with <span class="text-red-500">❤</span> by AniMan</p>
+    </footer>
+
+    <!-- JavaScript to handle the copy functionality and the pop-up -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const copyIpButton = document.getElementById('copy-ip-btn');
+            const joinNowButton = document.getElementById('join-now-btn');
+            const ipToCopy = 'play.chocomc.in';
+
+            const showToast = (message) => {
+                // Create a new div element for the toast
+                const toast = document.createElement('div');
+                toast.textContent = message;
+                toast.classList.add('toast', 'opacity-0', 'transition-opacity');
+                document.body.appendChild(toast);
+
+                // Force a reflow to ensure the transition works
+                void toast.offsetWidth;
+
+                // Make the toast visible
+                toast.classList.remove('opacity-0');
+                toast.classList.add('opacity-100');
+
+                // Hide and remove the toast after 3 seconds
+                setTimeout(() => {
+                    toast.classList.remove('opacity-100');
+                    toast.classList.add('opacity-0');
+                    setTimeout(() => {
+                        document.body.removeChild(toast);
+                    }, 300); // Wait for the transition to finish
+                }, 3000);
+            };
+
+            const handleCopyClick = () => {
+                // Create a temporary textarea element to hold the text to be copied
+                const tempTextarea = document.createElement('textarea');
+                tempTextarea.value = ipToCopy;
+                document.body.appendChild(tempTextarea);
+                tempTextarea.select();
+                
+                try {
+                    // Execute the copy command
+                    document.execCommand('copy');
+                } catch (err) {
+                    console.error('Failed to copy text: ', err);
+                } finally {
+                    // Show the toast message regardless of success or failure
+                    showToast(`IP address copied: ${ipToCopy}`);
+                    // Clean up by removing the temporary element
+                    document.body.removeChild(tempTextarea);
+                }
+            };
+
+            if (copyIpButton) {
+                copyIpButton.addEventListener('click', handleCopyClick);
+            }
+            if (joinNowButton) {
+                joinNowButton.addEventListener('click', handleCopyClick);
+            }
+        });
+    </script>
+</body>
+</html>
