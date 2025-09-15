@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChocoMC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-[#030c0c] text-white flex flex-col items-center;
+        }
+        .container {
+            @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+        }
+        .gradient-bg {
+            background-image: linear-gradient(180deg, #10b981, #064e3b, #030c0c);
+            position: relative;
+        }
+        /* Custom styles for the pop-up message */
+        .toast {
+            @apply fixed bottom-5 left-1/2 -translate-x-1/2 py-3 px-6 rounded-full shadow-lg transition-opacity duration-300 z-50;
+            background-color: #A3E635;
+            color: black;
+        }
+        /* Custom styles for the staff cards */
+        .staff-card {
+            background-color: #121212;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .staff-card:hover {
+            transform: translateY(-5px);
+        }
+        .staff-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #10b981;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        .staff-card .rank {
+            font-weight: 600;
+            color: #10b981;
+            margin-bottom: 0.5rem;
+        }
+        .staff-card .username {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="gradient-bg">
+
+    <header class="container pt-6 pb-20">
+        <nav class="flex items-center justify-between">
+            <div class="text-2xl font-bold">CHOCOMC STAFF</div>
+            <ul class="hidden md:flex items-center gap-6 text-sm text-white">
+                <li><a href="index.html" class="hover:text-white transition-colors duration-200">HOME</a></li>
+                <li><a href="#staff-section" class="hover:text-white transition-colors duration-200">STAFF</a></li>
+            </ul>
+            <a href="https://discord.gg/pUvS9JpE3e" target="_blank" rel="noopener noreferrer" class="hidden md:block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-200">
+                JOIN DISCORD
+            </a>
+            <button class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="staff-section" class="my-16 p-8 rounded-2xl bg-[#158E56] shadow-lg">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-10">THE CHOCOMC STAFF TEAM</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div class="staff-card">
+                    <img src="https://minotar.net/avatar/NeverT4_/100.png" alt="ItsAniMan's Minecraft Skin">
+                    <div class="rank">FOUNDER</div>
+                    <div class="username">AniMan</div>
+                </div>
+                <div class="staff-card">
+                    <img src="https://minotar.net/avatar/Schnitzel0711/100.png" alt="Notch's Minecraft Skin">
+                    <div class="rank">FOUNDER</div>
+                    <div class="username">ROHIT</div>
+                </div>
+                <div class="staff-card">
+                    <img src="https://minotar.net/avatar/wreeper1/100.png" alt="Dinnerbone's Minecraft Skin">
+                    <div class="rank">OWNER</div>
+                    <div class="username">BRINE</div>
+                </div>
+                <div class="staff-card">
+                    <img src="https://minotar.net/avatar/Lewtty/100.png" alt="jeb_'s Minecraft Skin">
+                    <div class="rank">CHIEF MANAGER</div>
+                    <div class="username">SHUB</div>
+                </div>
+                <div class="staff-card">
+                    <img src="https://minotar.net/avatar/indw/100.png" alt="jeb_'s Minecraft Skin">
+                    <div class="rank">MANAGER</div>
+                    <div class="username">BABLU</div>
+                </div>
+                <div class="staff-card">
+                    <img src="https://minotar.net/avatar/jeb_/100.png" alt="jeb_'s Minecraft Skin">
+                    <div class="rank">MANAGER</div>
+                    <div class="username">SUNNY</div>
+                </div>
+		<div class="staff-card">
+                    <img src="https://minotar.net/avatar/keabi/100.png" alt="jeb_'s Minecraft Skin">
+                    <div class="rank">MODERATOR</div>
+                    <div class="username">HANNU</div>
+                </div>
+	    </div>
+        </section>
+
+        <section class="my-16 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-white">
+                Ready to join the ChocoMC community?
+            </h2>
+            <button id="join-now-btn" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-12 rounded-full transition-colors duration-200">
+                    Join Now
+                </button>
+        </section>
+    </main>
+
+    <footer class="container text-center py-6 text-white text-sm">
+        <p>Created with <span class="text-red-500">❤</span> by AniMan</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const copyIpButton = document.getElementById('copy-ip-btn');
+            const joinNowButton = document.getElementById('join-now-btn');
+            const ipToCopy = 'play.chocomc.in';
+
+            const showToast = (message) => {
+                const toast = document.createElement('div');
+                toast.textContent = message;
+                toast.classList.add('toast', 'opacity-0', 'transition-opacity');
+                document.body.appendChild(toast);
+                void toast.offsetWidth;
+                toast.classList.remove('opacity-0');
+                toast.classList.add('opacity-100');
+                setTimeout(() => {
+                    toast.classList.remove('opacity-100');
+                    toast.classList.add('opacity-0');
+                    setTimeout(() => {
+                        document.body.removeChild(toast);
+                    }, 300);
+                }, 3000);
+            };
+
+            const handleCopyClick = () => {
+                const tempTextarea = document.createElement('textarea');
+                tempTextarea.value = ipToCopy;
+                document.body.appendChild(tempTextarea);
+                tempTextarea.select();
+                
+                try {
+                    document.execCommand('copy');
+                } catch (err) {
+                    console.error('Failed to copy text: ', err);
+                } finally {
+                    showToast(`IP address copied: ${ipToCopy}`);
+                    document.body.removeChild(tempTextarea);
+                }
+            };
+
+            if (copyIpButton) {
+                copyIpButton.addEventListener('click', handleCopyClick);
+            }
+            if (joinNowButton) {
+                joinNowButton.addEventListener('click', handleCopyClick);
+            }
+        });
+    </script>
+</body>
+</html>

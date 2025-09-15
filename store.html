@@ -1,0 +1,337 @@
+<!DOCTYPE ahtml>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChocoMC</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-[#030c0c] text-white flex flex-col items-center;
+        }
+        .container {
+            @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+        }
+        .gradient-bg {
+            background-image: linear-gradient(180deg, #10b981, #064e3b, #030c0c);
+            position: relative;
+        }
+        /* Custom styles for the pop-up message */
+        .toast {
+            @apply fixed bottom-5 left-1/2 -translate-x-1/2 py-3 px-6 rounded-full shadow-lg transition-opacity duration-300 z-50;
+            background-color: #A3E635;
+            color: black;
+        }
+    </style>
+</head>
+<body class="gradient-bg">
+
+    <!-- Header / Navigation -->
+    <header class="container pt-6 pb-20">
+        <nav class="flex items-center justify-between">
+            <!-- Logo/Site Name -->
+            <div class="text-2xl font-bold">CHOCOMC</div>
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex items-center gap-6 text-sm text-white">
+                <li><a href="index.html" class="hover:text-white transition-colors duration-200">HOME</a></li>
+                <li><a href="#store-section" class="hover:text-white transition-colors duration-200">STORE</a></li>
+            </ul>
+            <!-- Join Discord Button -->
+            <a href="https://discord.gg/pUvS9JpE3e" target="_blank" rel="noopener noreferrer" class="hidden md:block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-200">
+                JOIN DISCORD
+            </a>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Lifesteal Section -->
+        <section id="store-section" class="my-16 p-8 rounded-2xl bg-[#158E56] shadow-lg">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-10">Lifesteal</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Rank 1 -->
+                <div class="p-6 rounded-2xl shadow-lg" style="background-color: #64C99D;">
+                    <h3 class="text-2xl font-bold mb-2">BARON RANK</h3>
+                    <p class="text-sm text-white mb-4">A starter rank to get you going with some basic perks.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold">Price: <span class="text-white">59 INR</span></p>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-">
+                        <li>Create up to 3 Auction House Listings</li>
+			<li>Create up to 4x Set Homes</li>
+			<li>Access up to 4 vaults</li>
+			<li>Access up to 6 Orders</li>
+			<li>Death ban of 12 Hours</li>
+			<li>Baron Rank Prefix</li>
+                    </ul>
+                    <a href="https://discord.gg/pUvS9JpE3e" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block w-full text-center bg-white text-black font-semibold py-2 px-6 rounded-full transition-colors duration-200 hover:bg-gray-200">JOIN DISCORD</a>
+                </div>
+                <!-- Rank 2 -->
+                <div class="p-6 rounded-2xl shadow-lg" style="background-color: #121212;">
+                    <h3 class="text-2xl font-bold mb-2 text-emerald-700">VETERAN RANK</h3>
+                    <p class="text-sm text-white mb-4">Unlock more commands and special abilities with this rank.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold text-emerald-700">Price: <span class="text-white">89 INR</span></p>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-white">
+                        <li>Create up to 5 Auction House Listings</li>
+			<li>Access to do 6x Homes</li>
+			<li>Access up to 8 vaults</li>
+			<li>Death ban of 6 Hours</li>
+			<li>Access up to 10 Orders</li>
+			<li>Veteran Rank Prefix</li>
+                    </ul>
+                    <a href="https://discord.gg/pUvS9JpE3e" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block w-full text-center bg-white text-black font-semibold py-2 px-6 rounded-full transition-colors duration-200 hover:bg-gray-200">JOIN DISCORD</a>
+                </div>
+                <!-- Rank 3 -->
+                <div class="p-6 rounded-2xl shadow-lg" style="background-color: #64C99D;">
+                    <h3 class="text-2xl font-bold mb-2">GUARDIAN RANK</h3>
+                    <p class="text-sm text-white mb-4">The ultimate rank with exclusive perks and cosmetic features.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold">Price: <span class="text-white">199 INR</span></p>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-">
+                        <li>Create up to 8 Auction House Listings</li>
+			<li>Access to do 8x Homes</li>
+			<li>Access up to 12 vaults</li>
+			<li>Access up to 14 Orders</li>
+			<li>Death ban of 3 Hours</li>
+			<li>Guardian Rank Prefix</li>
+                    </ul>
+                    <a href="https://discord.gg/pUvS9JpE3e" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block w-full text-center bg-white text-black font-semibold py-2 px-6 rounded-full transition-colors duration-200 hover:bg-gray-200">JOIN DISCORD</a>
+                </div>
+		<!-- Rank 4 -->
+		<div class="p-6 rounded-2xl shadow-lg" style="background-color: #121212;">
+                    <h3 class="text-2xl font-bold mb-2 text-emerald-700">OVERLORD RANK</h3>
+                    <p class="text-sm text-white mb-4">The ultimate rank with exclusive perks and cosmetic features.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold text-emerald-700">Price: <span class="text-white">299 INR</span></p>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-white">
+                        <li>Create up to 11 Auction House Listings</li>
+			<li>Access to do set 12x Homes</li>
+			<li>Access up to 15 vaults</li>
+			<li>Access up to 18 Orders</li>
+			<li>Death ban of 1 Hours</li>
+			<li>Overlord Rank Prefix</li>
+                    </ul>
+                    <a href="https://discord.gg/pUvS9JpE3e" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block w-full text-center bg-white text-black font-semibold py-2 px-6 rounded-full transition-colors duration-200 hover:bg-gray-200">JOIN DISCORD</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BoxPvP Section -->
+        <section id="boxpvp-section" class="my-16 p-8 rounded-2xl bg-[#158E56] shadow-lg">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-10">BoxPvP</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Rank 1 -->
+                <div class="p-6 rounded-2xl shadow-lg" style="background-color: #121212;">
+                    <h3 class="text-2xl font-bold mb-2 text-emerald-700">HERO RANK</h3>
+                    <p class="text-sm text-white mb-4">A starter rank with basic BoxPvP perks.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold text-emerald-700">Price: <span class="text-white">100 INR</span></p>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-white">
+                        <li>/Kit Hero</li>
+			<li>Backpack x 1 Size</li>
+			<li>Set Home 2</li>
+			<li>Glow</li>
+			<li>Vault 1</li>
+			<li>Gsit</li>
+                    </ul>
+                    <a href="https://discord.gg/pUvS9JpE3e" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block w-full text-center bg-white text-black font-semibold py-2 px-6 rounded-full transition-colors duration-200 hover:bg-gray-200">JOIN DISCORD</a>
+                </div>
+                <!-- Rank 2 -->
+                <div class="p-6 rounded-2xl shadow-lg" style="background-color: #64C99D;">
+                    <h3 class="text-2xl font-bold mb-2">ULTRA RANK</h3>
+                    <p class="text-sm text-white mb-4">Unlock more commands and special abilities in BoxPvP.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold">Price: <span class="text-white">199 INR</span></p>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-">
+                        <li>/Kit Ultra</li>
+			<li>Backpack x 2 Size</li>
+			<li>Glow</li>
+			<li>Vault 2</li>
+			<li>Sit</li>
+			<li>Lay</li>
+			<li>/Enderchest</li>
+                    </ul>
+                    <a href="https://discord.gg/pUvS9JpE3e" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block w-full text-center bg-white text-black font-semibold py-2 px-6 rounded-full transition-colors duration-200 hover:bg-gray-200">JOIN DISCORD</a>
+                </div>
+                <!-- Rank 3 -->
+                <div class="p-6 rounded-2xl shadow-lg" style="background-color: #121212;">
+                    <h3 class="text-2xl font-bold mb-2 text-emerald-700">LEGEND RANK</h3>
+                    <p class="text-sm text-white mb-4">An advanced rank with exclusive BoxPvP features.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold text-emerald-700">Price: <span class="text-white">350 INR</span></p>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-white">
+                        <li>/Kit Legend</li>
+			<li>Backpack x 3 Size</li>
+			<li>Glow</li>
+			<li>Vault 3</li>
+			<li>Sit</li>
+			<li>Lay</li>
+			<li>bellyflop</li>
+			<li>/Enderchest</li>
+                    </ul>
+                    <a href="https://discord.gg/pUvS9JpE3e" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block w-full text-center bg-white text-black font-semibold py-2 px-6 rounded-full transition-colors duration-200 hover:bg-gray-200">JOIN DISCORD</a>
+                </div>
+                <!-- Rank 4 -->
+                <div class="p-6 rounded-2xl shadow-lg" style="background-color: #64C99D;">
+                    <h3 class="text-2xl font-bold mb-2">DRAGON RANK</h3>
+                    <p class="text-sm text-white mb-4">The third highest rank for BoxPvP, providing all available perks.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold">Price: <span class="text-white">550 INR</span></p>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-">
+                        <li>/Kit Dragon</li>
+			<li>Backpack x 4 Size</li>
+			<li>Hat</li>
+			<li>Spin</li>
+			<li>Crawl</li>
+			<li>Glow</li>
+			<li>Sit</li>
+			<li>Lay</li>
+			<li>bellyflop</li>
+			<li>/Enderchest</li>
+                    </ul>
+                    <a href="https://discord.gg/pUvS9JpE3e" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block w-full text-center bg-white text-black font-semibold py-2 px-6 rounded-full transition-colors duration-200 hover:bg-gray-200">JOIN DISCORD</a>
+                </div>
+		<!-- Rank 5 -->
+                <div class="p-6 rounded-2xl shadow-lg" style="background-color: #121212;">
+                    <h3 class="text-2xl font-bold mb-2 text-emerald-700">SUPREME RANK</h3>
+                    <p class="text-sm text-white mb-4">The highest rank for BoxPvP, providing all available perks.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold text-emerald-700">Price: <span class="text-white">200 INR</span></p>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-white">
+			<li>/Kit Supreme</li>
+			<li>keyall Cmd Access</li>
+			<li>Backpack x 5 Size</li>
+			<li>Hat</li>
+			<li>Spin</li>
+			<li>Crawl</li>
+			<li>Glow</li>
+			<li>Sit</li>
+			<li>Lay</li>
+			<li>bellyflop</li>
+			<li>/Enderchest</li>
+                    </ul>
+                    <a href="https://discord.gg/pUvS9JpE3e" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block w-full text-center bg-white text-black font-semibold py-2 px-6 rounded-full transition-colors duration-200 hover:bg-gray-200">JOIN DISCORD</a>
+                </div>
+		<!-- Rank 6 -->
+                <div class="p-6 rounded-2xl shadow-lg" style="background-color: #64C99D;">
+                    <h3 class="text-2xl font-bold mb-2">BoxPvP Rank 4</h3>
+                    <p class="text-sm text-white mb-4">The highest rank for BoxPvP, providing all available perks.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold">Price: <span class="text-white">999 INR</span></p>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-">
+			<li>/Kit Overpowered</li>
+			<li>keyall Cmd Access</li>
+			<li>Pvp Cmd access</li>
+			<li>Backpack x 6 Size</li>
+			<li>Hat</li>
+			<li>Spin</li>
+			<li>Crawl</li>
+			<li>Glow</li>
+			<li>Sit</li>
+			<li>Lay</li>
+			<li>bellyflop</li>
+			<li>/Enderchest</li>
+                    </ul>
+                    <a href="https://discord.gg/pUvS9JpE3e" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block w-full text-center bg-white text-black font-semibold py-2 px-6 rounded-full transition-colors duration-200 hover:bg-gray-200">JOIN DISCORD</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Final Call to Action -->
+        <section class="my-16 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-white">
+                Ready to join the ChocoMC community?
+            </h2>
+            <button id="join-now-btn" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-12 rounded-full transition-colors duration-200">
+                    Join Now
+                </button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container text-center py-6 text-white text-sm">
+        <p>Created with <span class="text-red-500">❤</span> by AniMan</p>
+    </footer>
+
+    <!-- JavaScript to handle the copy functionality and the pop-up -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const copyIpButton = document.getElementById('copy-ip-btn');
+            const joinNowButton = document.getElementById('join-now-btn');
+            const ipToCopy = 'play.chocomc.in';
+
+            const showToast = (message) => {
+                // Create a new div element for the toast
+                const toast = document.createElement('div');
+                toast.textContent = message;
+                toast.classList.add('toast', 'opacity-0', 'transition-opacity');
+                document.body.appendChild(toast);
+
+                // Force a reflow to ensure the transition works
+                void toast.offsetWidth;
+
+                // Make the toast visible
+                toast.classList.remove('opacity-0');
+                toast.classList.add('opacity-100');
+
+                // Hide and remove the toast after 3 seconds
+                setTimeout(() => {
+                    toast.classList.remove('opacity-100');
+                    toast.classList.add('opacity-0');
+                    setTimeout(() => {
+                        document.body.removeChild(toast);
+                    }, 300); // Wait for the transition to finish
+                }, 3000);
+            };
+
+            const handleCopyClick = () => {
+                // Create a temporary textarea element to hold the text to be copied
+                const tempTextarea = document.createElement('textarea');
+                tempTextarea.value = ipToCopy;
+                document.body.appendChild(tempTextarea);
+                tempTextarea.select();
+                
+                try {
+                    // Execute the copy command
+                    document.execCommand('copy');
+                } catch (err) {
+                    console.error('Failed to copy text: ', err);
+                } finally {
+                    // Show the toast message regardless of success or failure
+                    showToast(`IP address copied: ${ipToCopy}`);
+                    // Clean up by removing the temporary element
+                    document.body.removeChild(tempTextarea);
+                }
+            };
+
+            if (copyIpButton) {
+                copyIpButton.addEventListener('click', handleCopyClick);
+            }
+            if (joinNowButton) {
+                joinNow.addEventListener('click', handleCopyClick);
+            }
+        });
+    </script>
+</body>
+</html>
